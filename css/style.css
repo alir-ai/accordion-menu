@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e3f2fd;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_accordion {
+  width: 580px;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 0.9rem;
+}
+.row_accordion {
+  padding: 0 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+.section_accordion .row_accordion:nth-child(1) {
+  background-color: #fff7f0;
+  border: 1px solid #ffd6b3;
+}
+.section_accordion .row_accordion:nth-child(2) {
+  background-color: #f0faff;
+  border: 1px solid #cceeff;
+}
+.section_accordion .row_accordion:nth-child(3) {
+  background-color: #fff0f3;
+  border: 1px solid #ffccd6;
+}
+.section_accordion .row_accordion:nth-child(4) {
+  background-color: #f0f0ff;
+  border: 1px solid #ccccff;
+}
+.header_accordion {
+  min-height: 3rem;
+  line-height: 3rem;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.header_accordion span:first-child {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header_accordion span:last-child::before,
+.header_accordion span:last-child::after {
+  content: "";
+  height: 9px;
+  border: 1px solid #333;
+  display: inline-block;
+}
+
+.header_accordion span:last-child::after {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  transform: rotate(89deg);
+  -webkit-transform: rotate(89deg);
+  -moz-transform: rotate(89deg);
+  -ms-transform: rotate(89deg);
+  -o-transform: rotate(89deg);
+}
+
+.content_accordion {
+  height: 0;
+  font-size: 12px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+}
+.row_accordion input:checked + label + p {
+  height: 70px;
+}
+.row_accordion input:checked + label span:last-child::before {
+  opacity: 0;
+}
